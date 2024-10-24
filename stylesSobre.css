@@ -1,0 +1,431 @@
+@font-face {
+    font-family: "fonte";
+    src: url("Fontes/FilsonProHeavy.otf");
+}
+
+body {
+    font-family: fonte;
+    line-height: 1.6rem;
+    background-color: rgb(219, 219, 218);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/*HEADER(CABEÇALHO)*/
+
+header {
+    position: fixed;
+    width: 100%;
+    background-color: rgb(11, 14, 24);
+    color: white;
+    padding: 30px 20px;
+    z-index: 10;
+
+}
+    
+
+
+header .logo {
+    position: absolute;
+    left: 20px;
+}
+
+header .logo img {
+    height: 55px;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 6px 16px;
+
+}
+
+nav ul li a:hover {
+    color: rgb(220 184 97);
+}
+
+
+/*SOBRE(IMAGEM  E TEXTOS)*/
+
+#about {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(219, 219, 218);
+    color: #555;
+    padding: 40px 0;
+}
+
+.content {
+    display: flex;
+    max-width: 1100px;
+    width: 100%;
+    padding-top: 80px;
+}
+
+.text-section {
+    flex-basis: 50%;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+
+.text-section h2 {
+    font-size: 2.4em;
+    margin-bottom: 0.5em;
+    color: rgb(51, 116, 185);
+}
+
+.text-section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #666;
+}
+
+.image-section {
+    flex-basis: 50%;
+    text-align: left;
+    margin-left: 37px;
+    margin-top: 200px;
+}
+
+.image-section img {
+    max-width: 120%;
+    height: auto;
+}
+
+/*MEMBRO E FOTOS*/
+
+.team {
+    margin-top: 50px;
+}
+
+.team h3 {
+    text-align: center;
+    font-size: 2.0em;
+    color: rgb(51, 116, 185);
+}
+
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    text-align: center;
+}
+
+.member {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+}
+
+.member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+
+.member h4 {
+    color: rgb(11, 14, 24);
+    margin: 10px 0 5px;
+}
+
+.member p {
+    color: rgb(51, 116, 185);
+    font-size: 1em;
+    margin: 0;
+}
+
+
+.icon-images {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.icon-images img {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*FOOTER (RODAPÉ) */
+
+footer {
+    background-color: rgb(11, 14, 24);
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 0;
+    color: #fff;
+}
+
+.about p {
+    text-align: justify;
+}
+
+/*POPUP*/
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 700%;
+    height: 100%;
+    padding: 120px;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.popup-content h1 {
+    color: rgb(51, 116, 185);
+    font-size: 33px;
+    position: relative;
+}
+
+form label[for="nome"] {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+form input#nome {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+#nome {
+    border: 2px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#nome:focus {
+    border-color: rgb(51, 116, 185);
+    outline: none;
+}
+
+form label[for="email"] {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+form input#email {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+#email {
+    border: 2px solid #ccc;
+
+    padding: 10px;
+
+    border-radius: 5px;
+
+    font-size: 16px;
+
+}
+
+#email:focus {
+    border-color: rgb(51, 116, 185);
+
+    outline: none;
+
+}
+
+
+#telefone {
+    border: 2px solid #ccc;
+
+    padding: 10px;
+
+    border-radius: 5px;
+
+    font-size: 16px;
+
+}
+
+#telefone:focus {
+    border-color: rgb(51, 116, 185);
+
+    outline: none;
+
+}
+
+form label[for="telefone"] {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+form input#telefone {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+
+
+#restaurante {
+    border: 2px solid #ccc;
+
+    padding: 10px;
+
+    border-radius: 5px;
+
+    font-size: 16px;
+
+}
+
+#restaurante:focus {
+    border-color: rgb(51, 116, 185);
+
+    outline: none;
+
+}
+
+form label[for="restaurante"] {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+form input#restaurante {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+
+#produto {
+    background-color: #fcfcfc;
+
+    color: rgba(0, 0, 0, 0.4);
+
+    border: 1px solid rgba(0, 0, 0, 0.4);
+
+    border-radius: 5px;
+
+    padding: 10px;
+
+    font-size: 15px;
+
+    width: 104%;
+
+    appearance: none;
+
+    -webkit-appearance: none;
+
+    -moz-appearance: none;
+
+    height: 40px;
+
+
+}
+
+#produto:focus {
+    outline: none;
+    border-color: rgb(51, 116, 185);
+}
+
+form label[for="produto"] {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+form input#produto {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+
+
+.popup-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 40px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    width: 100%;
+    padding: 15px;
+    background-color: rgb(51, 116, 185);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+form button:hover {
+    background-color: rgb(51, 116, 185);
+}
+
+form p {
+    font-size: 14px;
+    color: rgb(11, 14, 24);
+}
+
+form p a {
+    color: rgb(51, 116, 185);
+    text-decoration: none;
+}
+
+form p a:hover {
+    text-decoration: underline;
+}
