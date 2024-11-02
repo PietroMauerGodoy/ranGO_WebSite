@@ -22,7 +22,7 @@
                 <li><a href="#home">Início</a></li>
                 <li><a href="#products">Produtos</a></li>
                 <li><a href="sobre-nos.html">Sobre Nós</a></li>
-                <li><a href="#" id="contact-btn">Contato</a></li>
+                <li><a href="#" id="contact-btn">Cadastro</a></li>
 
             </ul>
         </nav>
@@ -52,13 +52,13 @@
 
         <div class="product-list">
             <div class="product">
-                <img id="image1" src="telas/tela login.png" alt="Imagem 1" class="fade-img show">
-                <img id="image2" src="telas/tela home.png" alt="Imagem 2" class="fade-img">
-                <img id="image3" src="telas/tela dash.png" alt="Imagem 3" class="fade-img">
-                <img id="image4" src="telas/tela estoque.png" alt="Imagem 4" class="fade-img">
-                <img id="image5" src="telas/tela fornecedor.png" alt="Imagem 5" class="fade-img">
-                <img id="image6" src="telas/tela pedidos.png" alt="Imagem 6" class="fade-img">
-                <img id="image7" src="telas/tela config.png" alt="Imagem 7" class="fade-img">
+                <img id="image1" src="telas/logar.png" alt="Imagem 1" class="fade-img show">
+                <img id="image2" src="telas/HomeView.png" alt="Imagem 2" class="fade-img">
+                <img id="image3" src="telas/DashboardView (incompleta).png" alt="Imagem 3" class="fade-img">
+                <img id="image4" src="telas/StorageView.png" alt="Imagem 4" class="fade-img">
+                <img id="image5" src="telas/SupplyView.png" alt="Imagem 5" class="fade-img">
+                <img id="image6" src="telas/ClosedOrders + MenuView.png" alt="Imagem 6" class="fade-img">
+                <img id="image7" src="telas/OptionsView.png" alt="Imagem 7" class="fade-img">
 
 
             </div>
@@ -73,44 +73,51 @@
 
     <section id="plans" class="pricing-section">
         <h1>Planos & Preços</h1>
-       <p> Escolha o plano ideal para simplificar a gestão do seu restaurante</p>
+        <p> Escolha o plano ideal para simplificar a gestão do seu restaurante</p>
         <div class="pricing-cards">
             <div class="card">
-                <h2>Básico</h2>
-                <p>R$ 70,00 / mês</p>
+                <h2>inicial</h2>
+                <p>R$ 125,00 / mês</p>
                 <ul>
-                    <li>Dashboard customizável</li>
                     <li>Gestão de estoque</li>
                     <li>Criação e gestão de cardápios</li>
                     <li>Notificações de baixo estoque e perfil da empresa</li>
+                    <li>Cadastro de até 150 produtos</li>
+                    <li>Cadastro de até 20 fornecedores</li>
 
                 </ul>
-                <button onclick="goToPaymentPage('Básico', 70)">Assinar</button>
+                <button onclick=" goToPaymentIniciante('inicial', 120)">Assinar</button>
             </div>
 
-            <div class="card popular">
-                <h2>Médio</h2>
-                <p>R$ 85,00 / mês</p>
-                <ul>
-                    <li>Todos os recursos existentes no plano básico</li>
-                    <li>+Área de fornecedores</li>
-                    <li>+Notificações de fornecedores</li>
-
-                </ul>
-                <button onclick="goToPaymentPage('Médio', 85)">Assinar</button>
-            </div>
+            
+            <script>
+                function goToPaymentIniciante(plan, amount) {
+                    window.location.href = 'pixInicial.html';
+                    window.open('pixInicial.html', '_blank');
+                }
+               
+            </script>
+         
 
             <div class="card">
-                <h2>Premium</h2>
-                <p>R$ 100,00 / mês</p>
+                <h2>Pro</h2>
+                <p>R$ 200,00 / mês</p>
                 <ul>
-                    <li>Todos os recursos existentes no plano básico e Médio</li>
-                    <li>+Painel de gerente</li>
-                    <li>+Ánalise gráfica de vendas</li>
-                    <li>+Controle de desempenho de funcionários</li>
-                    <li>+Sistema de pedidos(Automação)</li>
+                    <li>Inclui todos os recursos do plano Inicial, mais:</li>
+                    <li>Sistema de pedidos (Automação)</li>
+                    <li>Cardápio Virtual</li>
+                    <li>Cadastro ilimitado de produtos e fornecedores</li>
+
                 </ul>
-                <button onclick="goToPaymentPage('Premium', 100)">Assinar</button>
+                <button onclick="goToPaymentPage()">Assinar</button>
+
+                <script>
+                  function goToPaymentPage() {
+                    window.location.href = 'pixPro.html'; 
+                    window.open('pixPro.html', '_blank');
+                  }
+                </script>
+
 
             </div>
         </div>
@@ -141,19 +148,19 @@
                 <label for="produto">Qual plano tem interesse?*</label>
                 <select id="produto" name="produto" required>
                     <option value="">Selecione um plano</option>
-                    <option value="produto1">Básico</option>
-                    <option value="produto2">Médio</option>
-                    <option value="produto3">Primium</option>
+                    <option value="produto1">inicial</option>
+                    <option value="produto2">Pro</option>
                 </select>
 
                 <p>Ao me cadastrar, concordo com os <a href="#">Termos de Uso</a> e com a <a href="#">Política de
                         Privacidade</a> da ranGO!</p>
 
-                <button type="submit">Enviar meus dados</button>
+                <button type="submit">Cadastrar</button>
             </form>
         </div>
 
-      
+
+
 
         <script src="script.js"></script>
 </body>

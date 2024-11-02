@@ -1,0 +1,72 @@
+@font-face {
+  font-family: "fonte";
+  src: url("Fontes/FilsonProHeavy.otf");
+}
+
+
+body {
+  background-image: url('fundo/Pattern-verde.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh; 
+  margin: 0;
+}
+
+.donation-card {
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0,0,0,.1);
+  color:#333;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+ 
+}
+
+.donation-card h2 {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.donation-card h3 {
+  font-size: 1em;
+  margin: 10px 0;
+  color:#333;
+}
+
+.qr-code {
+  width: 150px;
+  height: 150px;
+  margin: 10px 0;
+}
+
+.donation-card p {
+  font-size: 0.9em;
+  color:#333;
+  margin-bottom: 15px;
+}
+
+.donate-button {
+  background-color: #dbdbda;
+  color: #11151d;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.donate-button span {
+color:  rgb(51, 116, 185);
+}
+
+.donate-button:hover {
+  background-color: #c2c2c2;
+}

@@ -1,10 +1,22 @@
 @font-face {
-    font-family: "fonte";
+    font-family: "titulo";
     src: url("Fontes/FilsonProHeavy.otf");
 }
 
+
+@font-face {
+    font-family: "subTitulo";
+    src: url("Fontes/FilsonProRegular.otf");
+}
+
+@font-face {
+    font-family: "botao";
+    src: url("Fontes/FilsonProBold.otf");
+}
+
+
 body {
-    font-family: fonte;
+ 
     line-height: 1.6rem;
     background-color: rgb(219, 219, 218);
     margin: 0;
@@ -15,6 +27,7 @@ body {
 /*HEADER(CABEÇALHO)*/
 
 header {
+    font-family: titulo;
     position: fixed;
     width: 100%;
     background-color: rgb(11, 14, 24);
@@ -89,12 +102,14 @@ nav ul li a:hover {
 }
 
 .text-section h2 {
+    font-family: titulo;
     font-size: 2.4em;
     margin-bottom: 0.5em;
     color: rgb(51, 116, 185);
 }
 
 .text-section p {
+    font-family: subTitulo;
     font-size: 1.2em;
     line-height: 1.6;
     color: #666;
@@ -119,6 +134,7 @@ nav ul li a:hover {
 }
 
 .team h3 {
+    font-family: titulo;
     text-align: center;
     font-size: 2.0em;
     color: rgb(51, 116, 185);
@@ -150,11 +166,13 @@ nav ul li a:hover {
 
 
 .member h4 {
+    font-family: titulo;
     color: rgb(11, 14, 24);
     margin: 10px 0 5px;
 }
 
 .member p {
+    font-family: subTitulo;
     color: rgb(51, 116, 185);
     font-size: 1em;
     margin: 0;
@@ -178,6 +196,7 @@ nav ul li a:hover {
 /*FOOTER (RODAPÉ) */
 
 footer {
+    font-family: titulo;
     background-color: rgb(11, 14, 24);
     padding: 20px 0;
     text-align: center;
@@ -213,12 +232,14 @@ footer p {
 }
 
 .popup-content h1 {
+    font-family: titulo;
     color: rgb(51, 116, 185);
     font-size: 33px;
     position: relative;
 }
 
 form label[for="nome"] {
+    font-family: subTitulo;
     color: rgba(0, 0, 0, 0.4);
 }
 
@@ -227,6 +248,7 @@ form input#nome {
 }
 
 #nome {
+    font-family: subTitulo;
     border: 2px solid #ccc;
     padding: 10px;
     border-radius: 5px;
@@ -239,6 +261,7 @@ form input#nome {
 }
 
 form label[for="email"] {
+    font-family: subTitulo;
     color: rgba(0, 0, 0, 0.4);
 }
 
@@ -247,6 +270,7 @@ form input#email {
 }
 
 #email {
+    font-family: subTitulo;
     border: 2px solid #ccc;
 
     padding: 10px;
@@ -266,6 +290,7 @@ form input#email {
 
 
 #telefone {
+    font-family: subTitulo;
     border: 2px solid #ccc;
 
     padding: 10px;
@@ -284,6 +309,7 @@ form input#email {
 }
 
 form label[for="telefone"] {
+    font-family: subTitulo;
     color: rgba(0, 0, 0, 0.4);
 }
 
@@ -294,6 +320,7 @@ form input#telefone {
 
 
 #restaurante {
+    font-family: subTitulo;
     border: 2px solid #ccc;
 
     padding: 10px;
@@ -312,6 +339,7 @@ form input#telefone {
 }
 
 form label[for="restaurante"] {
+    font-family: subTitulo;
     color: rgba(0, 0, 0, 0.4);
 }
 
@@ -321,6 +349,7 @@ form input#restaurante {
 
 
 #produto {
+    font-family: subTitulo;
     background-color: #fcfcfc;
 
     color: rgba(0, 0, 0, 0.4);
@@ -347,15 +376,18 @@ form input#restaurante {
 }
 
 #produto:focus {
+    
     outline: none;
     border-color: rgb(51, 116, 185);
 }
 
 form label[for="produto"] {
+    font-family: subTitulo;
     color: rgba(0, 0, 0, 0.4);
 }
 
 form input#produto {
+    font-family: subTitulo;
     color: rgba(0, 0, 0, 0.4);
 }
 
@@ -392,6 +424,7 @@ form label {
 
 form input,
 form select {
+    font-family: subTitulo;
     width: 100%;
     padding: 10px;
     margin-top: 5px;
@@ -401,6 +434,7 @@ form select {
 }
 
 form button {
+    font-family: subTitulo;
     width: 100%;
     padding: 15px;
     background-color: rgb(51, 116, 185);
@@ -413,12 +447,14 @@ form button {
 }
 
 form button:hover {
+    font-family: subTitulo;
     background-color: rgb(51, 116, 185);
 }
 
 form p {
+    font-family: subTitulo;
     font-size: 14px;
-    color: rgb(11, 14, 24);
+    color: #888;
 }
 
 form p a {

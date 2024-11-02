@@ -91,10 +91,19 @@ function showNextImage() {
 setInterval(showNextImage, 3500);
 
 
+function goToPaymentIniciante(planName, price) {
+    // Redireciona para a página de pagamento com parâmetros de query string (opcional)
+    window.location.href = `pixInicial.html?plan=${planName}&price=${price}`;
+}
+
+
 function goToPaymentPage(planName, price) {
     // Redireciona para a página de pagamento com parâmetros de query string (opcional)
-    window.location.href = `pagamento.html?plan=${planName}&price=${price}`;
+    window.location.href = `pixPro.html?plan=${planName}&price=${price}`;
 }
+
+
+
 
 
 
