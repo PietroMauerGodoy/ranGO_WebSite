@@ -1,50 +1,35 @@
-/*fechar e abrir o popup*/
+// Função para abrir e fechar o popup
 document.addEventListener("DOMContentLoaded", function() {
-    var popup = document.getElementById("contact-popup");
-    var contactBtn = document.getElementById("contact-btn");
-    var closeBtn = document.getElementsByClassName("close-btn")[0];
+    const popup = document.getElementById("contact-popup");
+    const contactBtn = document.getElementById("contact-btn");
+    const closeBtn = document.getElementsByClassName("close-btn")[0];
 
-    contactBtn.onclick = function() {
+    contactBtn.onclick = () => {
         popup.style.display = "flex";
-    }
+    };
 
-    closeBtn.onclick = function() {
+    closeBtn.onclick = () => {
         popup.style.display = "none";
-    }
+    };
 
-    window.onclick = function(event) {
-        if (event.target == popup) {
+    window.onclick = (event) => {
+        if (event.target === popup) {
             popup.style.display = "none";
         }
-    }
+    };
 });
 
-/*aceitar apenas números em "telefone" */
-function openPopup() {
-    document.getElementById("myPopup").style.display = "block";
-}
-
-function closePopup() {
-    document.getElementById("myPopup").style.display = "none";
-}
-document.getElementById('telefone').addEventListener('input', function (e) {
+// Aceitar apenas números no campo "telefone"
+document.getElementById('telefone').addEventListener('input', function() {
     this.value = this.value.replace(/[^0-9]/g, '');
 });
 
-
-
-function openPopup() {
-    var popup = document.getElementById("myPopup");
-    popup.classList.add("show");
-}
-
-/*abrir link externo */
-
-document.addEventListener('DOMContentLoaded', function () {
+// Abrir link externo com rolagem suave
+document.addEventListener('DOMContentLoaded', function() {
     const links = document.querySelectorAll('header nav ul li a[href^="#"]');
 
     links.forEach(link => {
-        link.addEventListener('click', function (e) {
+        link.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.getAttribute('href').substring(1);
             const targetElement = document.getElementById(targetId);
@@ -56,8 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-/*telas do produto */
-
+// Exibir imagens do produto com texto correspondente
 const images = document.querySelectorAll('.fade-img');
 const texts = [
     "Login",
@@ -72,12 +56,8 @@ const textElement = document.getElementById('text');
 let currentImageIndex = 0;
 
 function showNextImage() {
-    
     images[currentImageIndex].classList.remove('show');
-    
-   
     currentImageIndex = (currentImageIndex + 1) % images.length;
-
     images[currentImageIndex].classList.add('show');
 
     textElement.style.opacity = 0; 
@@ -86,15 +66,10 @@ function showNextImage() {
         textElement.style.opacity = 1; 
     }, 500); 
 }
-
-
 setInterval(showNextImage, 3500);
 
-
-function goToPaymentPage(planName, price) {
-    // Redireciona para a página de pagamento com parâmetros de query string (opcional)
-    window.location.href = `pagamento.html?plan=${planName}&price=${price}`;
+// Redirecionar para telas de pagamento
+function goToPayment(planName, price, isPro = false) {
+    const page = isPro ? 'pixPro.html' : 'pixInicial.html';
+    window.location.href = `${page}?plan=${planName}&price=${price}`;
 }
-
-
-

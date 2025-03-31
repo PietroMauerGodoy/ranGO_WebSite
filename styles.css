@@ -1,21 +1,32 @@
 @font-face {
-    font-family: "fonte";
+    font-family: "titulo";
     src: url("Fontes/FilsonProHeavy.otf");
 }
 
+
+@font-face {
+    font-family: "subTitulo";
+    src: url("Fontes/FilsonProRegular.otf");
+}
+
+@font-face {
+    font-family: "botao";
+    src: url("Fontes/FilsonProBold.otf");
+}
+
 body {
-    font-family: fonte;
+
     background-color: rgb(11, 14, 24);
     color: rgb(219, 219, 218);
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-
 }
 
 /* HEADER(CABEÇALHO)*/
 
 header {
+    font-family: titulo;
     position: fixed;
     width: 100%;
     background-color: rgb(11, 14, 24);
@@ -85,9 +96,31 @@ nav ul li a:hover {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     object-fit: cover;
     z-index: 1;
+}
+
+/* Responsividade para notebooks */
+@media (max-width: 1440px) {
+    .homeimage-overlay {
+        height: 90vh; /* Reduz a altura para melhor visualização em notebooks */
+    }
+}
+
+/* Responsividade para tablets */
+@media (max-width: 1024px) {
+    .homeimage-overlay {
+        height: 80vh; /* Ajusta a altura para tablets */
+    }
+}
+
+/* Responsividade para smartphones */
+@media (max-width: 768px) {
+    .homeimage-overlay {
+        height: 70vh; /* Ajusta a altura para smartphones */
+        object-fit: contain; /* Ajusta o conteúdo da imagem para caber melhor em telas menores */
+    }
 }
 
 .image-overlay {
@@ -100,7 +133,33 @@ nav ul li a:hover {
     z-index: 1;
 }
 
+/* Responsividade para notebooks */
+@media (max-width: 1440px) {
+    .image-overlay {
+        top: 0; /* Ajusta o valor de 'top' para melhorar a visualização */
+        left: 50px; /* Reduz o deslocamento à esquerda */
+        height: 90vh;
+    }
+}
 
+/* Responsividade para tablets */
+@media (max-width: 1024px) {
+    .image-overlay {
+        top: 0;
+        left: 30px;
+        height: 80vh;
+    }
+}
+
+/* Responsividade para smartphones */
+@media (max-width: 768px) {
+    .image-overlay {
+        top: 0;
+        left: 0; /* Remove deslocamento para melhor ajuste */
+        height: 70vh;
+        object-fit: contain; /* Ajusta o conteúdo da imagem para caber melhor */
+    }
+}
 
 .hero {
     position: relative;
@@ -128,16 +187,18 @@ nav ul li a:hover {
 
 
 .hero h2 {
+    font-family: titulo;
     color: #DBDBDA;
-    font-size: 67px;
+    font-size: 65px;
     line-height: 1;
     margin-bottom: 30px;
 
 }
 
 .hero-content p {
+    font-family: subTitulo;
     color: #B0B0B0;
-    font-size: 21px !important;
+    font-size: 23px !important;
 
     line-height: 1;
     margin-bottom: 50px;
@@ -145,6 +206,7 @@ nav ul li a:hover {
 }
 
 .cta-btn {
+    font-family: botao;
     background-color: rgb(220 184 97);
     color: white;
     padding: 20px 30px;
@@ -211,6 +273,7 @@ nav ul li a:hover {
 
 
 
+
 .popup {
     display: none;
     position: fixed;
@@ -229,12 +292,14 @@ nav ul li a:hover {
 }
 
 .popup-content h1 {
+    font-family: titulo;
     color: rgb(51, 116, 185);
     font-size: 33px;
     position: relative;
 }
 
 form label[for="nome"] {
+    font-family: subTitulo;
     color: rgba(0, 0, 0, 0.4);
 }
 
@@ -243,6 +308,7 @@ form input#nome {
 }
 
 #nome {
+    font-family: subTitulo;
     border: 2px solid #ccc;
     padding: 10px;
     border-radius: 5px;
@@ -255,6 +321,7 @@ form input#nome {
 }
 
 form label[for="email"] {
+    font-family: subTitulo;
     color: rgba(0, 0, 0, 0.4);
 }
 
@@ -263,6 +330,7 @@ form input#email {
 }
 
 #email {
+    font-family: subTitulo;
     border: 2px solid #ccc;
 
     padding: 10px;
@@ -282,6 +350,7 @@ form input#email {
 
 
 #telefone {
+    font-family: subTitulo;
     border: 2px solid #ccc;
 
     padding: 10px;
@@ -300,6 +369,7 @@ form input#email {
 }
 
 form label[for="telefone"] {
+    font-family: subTitulo;
     color: rgba(0, 0, 0, 0.4);
 }
 
@@ -310,6 +380,7 @@ form input#telefone {
 
 
 #restaurante {
+    font-family: subTitulo;
     border: 2px solid #ccc;
 
     padding: 10px;
@@ -328,6 +399,7 @@ form input#telefone {
 }
 
 form label[for="restaurante"] {
+    font-family: subTitulo;
     color: rgba(0, 0, 0, 0.4);
 }
 
@@ -337,6 +409,7 @@ form input#restaurante {
 
 
 #produto {
+    font-family: subTitulo;
     background-color: #fcfcfc;
 
     color: rgba(0, 0, 0, 0.4);
@@ -363,15 +436,18 @@ form input#restaurante {
 }
 
 #produto:focus {
+    
     outline: none;
     border-color: rgb(51, 116, 185);
 }
 
 form label[for="produto"] {
+    font-family: subTitulo;
     color: rgba(0, 0, 0, 0.4);
 }
 
 form input#produto {
+    font-family: subTitulo;
     color: rgba(0, 0, 0, 0.4);
 }
 
@@ -408,6 +484,7 @@ form label {
 
 form input,
 form select {
+    font-family: subTitulo;
     width: 100%;
     padding: 10px;
     margin-top: 5px;
@@ -417,6 +494,7 @@ form select {
 }
 
 form button {
+    font-family: subTitulo;
     width: 100%;
     padding: 15px;
     background-color: rgb(51, 116, 185);
@@ -429,12 +507,14 @@ form button {
 }
 
 form button:hover {
+    font-family: subTitulo;
     background-color: rgb(51, 116, 185);
 }
 
 form p {
+    font-family: subTitulo;
     font-size: 14px;
-    color: rgba(0, 0, 0, 0.6);
+    color: #888;
 }
 
 form p a {
@@ -496,20 +576,21 @@ form p a:hover {
     padding: 50px 20px;
     text-align: center;
     font-size: 1.7rem;
-    
 }
 
-.product h2 {
+.products h2 {
+    font-family: titulo;
     color: rgb(219, 219, 218);
     font-size: 2.5rem;
-    margin-top: 20px; 
+    margin-top: 187px;
     margin-bottom: 10px;
 }
+    
 
 .products p {
+    font-family: subTitulo;
     font-size: 1.4rem;
     margin-bottom: 10px;
-   
 }
 
 .products .product-list {
@@ -607,8 +688,9 @@ form p a:hover {
         padding: 40px 15px;
     }
 
-    .product h3 {
+    .product h2 {
         font-size: 2rem; /* Reduz o tamanho do título */
+        margin-top: -137px;
     }
 
     .products p {
@@ -638,6 +720,7 @@ form p a:hover {
 
     .product h3 {
         font-size: 1.8rem; /* Reduz o tamanho do título */
+        margin-top: 200px;
     }
 
     .product img {
@@ -678,6 +761,7 @@ form p a:hover {
 }
 
 .pricing-section h1 {
+    font-family: titulo;
     color: rgb(219, 219, 218);
     font-size: 2.5rem;
     margin-bottom: 10px;
@@ -685,6 +769,7 @@ form p a:hover {
 }
 
 .pricing-section p {
+    font-family: subTitulo;
     font-size: 1.2rem;
     margin-bottom: 40px;
 }
@@ -716,6 +801,7 @@ form p a:hover {
 }
 
 .card h2 {
+    font-family: titulo;
     color: rgb(218, 171, 61);
     margin-bottom: 10px;
     font-size: 1.5rem;
@@ -728,12 +814,14 @@ form p a:hover {
 }
 
 .card ul li {
+    font-family: subTitulo;
     margin-bottom: 10px;
     font-size: 1rem;
     color: rgb(219, 219, 218);
 }
 
 .card button {
+    font-family: botao;
     background-color: rgb(218, 171, 61);
     border: none;
     padding: 10px;
@@ -855,6 +943,7 @@ form p a:hover {
 
 
 footer {
+    font-family: titulo;
     background-color: rgb(11, 14, 24);
 
     font-size: 1.2em;

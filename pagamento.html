@@ -4,96 +4,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ranGO! | Facilidade e praticidade no uso de sistemas</title>
+    <title>ranGO! | Pagamento</title>
     <link rel="shortcut icon" href="icon/iconBarra.png" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="Fontes/FilsonProHeavy.otf">
     <link rel="stylesheet" href="stylesPagamento1.css">
-
 </head>
+
 <body>
-
-<div class="container">
-   
-    <form action="">
-
-        <div class="row">
-
-            <div class="col">
-
-                <h3 class="title">Endereço de Cobrança</h3>
-
-                <div class="inputBox">
-                    <span>Nome completo*</span>
-                    <input type="text" placeholder="Digite seu nome completo">
-                </div>
-                <div class="inputBox">
-                    <span>e-mail*</span>
-                    <input type="email" placeholder="seunome@email.com.br">
-                </div>
-                <div class="inputBox">
-                    <span>Endereço</span>
-                    <input type="text" placeholder="Localização">
-                </div>
-                <div class="inputBox">
-                    <span>Cidade</span>
-                    <input type="text" placeholder="São Paulo">
-                </div>
-
-                <div class="flex">
+    <div class="container">
+        <form action="" method="post">
+            <div class="row">
+                <div class="col">
+                    <h3 class="title">Endereço de Cobrança</h3>
                     <div class="inputBox">
-                        <span>País</span>
-                        <input type="text" placeholder="Brasil">
+                        <label for="nome-completo">Nome completo*</label>
+                        <input type="text" id="nome-completo" name="nome-completo" placeholder="Digite seu nome completo" required>
                     </div>
                     <div class="inputBox">
-                        <span>Zip code </span>
-                        <input type="text" placeholder="123 456">
+                        <label for="email">E-mail*</label>
+                        <input type="email" id="email" name="email" placeholder="seunome@email.com.br" required>
+                    </div>
+                    <div class="inputBox">
+                        <label for="endereco">Endereço</label>
+                        <input type="text" id="endereco" name="endereco" placeholder="Localização">
+                    </div>
+                    <div class="inputBox">
+                        <label for="cidade">Cidade</label>
+                        <input type="text" id="cidade" name="cidade" placeholder="São Paulo">
+                    </div>
+                    <div class="flex">
+                        <div class="inputBox">
+                            <label for="pais">País</label>
+                            <input type="text" id="pais" name="pais" placeholder="Brasil">
+                        </div>
+                        <div class="inputBox">
+                            <label for="zip-code">Zip code</label>
+                            <input type="text" id="zip-code" name="zip-code" placeholder="123 456">
+                        </div>
                     </div>
                 </div>
 
+                <div class="col">
+                    <h3 class="title">Pagamento</h3>
+                    <div class="inputBox">
+                        <span>Cartões aceitos*</span>
+                        <img src="icon/card_img.png" alt="Cartões aceitos">
+                    </div>
+                    <div class="inputBox">
+                        <label for="nome-cartao">Nome do cartão*</label>
+                        <input type="text" id="nome-cartao" name="nome-cartao" placeholder="Nome do cartão" required>
+                    </div>
+                    <div class="inputBox">
+                        <label for="numero-cartao">Número do cartão*</label>
+                        <input type="text" id="numero-cartao" name="numero-cartao" placeholder="1111-2222-3333-4444" required pattern="\d{4}-\d{4}-\d{4}-\d{4}">
+                    </div>
+                    <div class="inputBox">
+                        <label for="mes-validade">Mês de validade*</label>
+                        <input type="text" id="mes-validade" name="mes-validade" placeholder="Janeiro" required>
+                    </div>
+                    <div class="flex">
+                        <div class="inputBox">
+                            <label for="ano-validade">Ano de validade*</label>
+                            <input type="number" id="ano-validade" name="ano-validade" placeholder="2022" required min="2023">
+                        </div>
+                        <div class="inputBox">
+                            <label for="cvv">CVV*</label>
+                            <input type="text" id="cvv" name="cvv" placeholder="123" required pattern="\d{3,4}">
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <div class="col">
-
-                <h3 class="title">Pagamento</h3>
-
-                <div class="inputBox">
-                    <span>Cartões aceitos*</span>
-                    <img src="icon/card_img.png" alt="">
-                </div>
-                <div class="inputBox">
-                    <span>Nome do cartão*</span>
-                    <input type="text" placeholder="Nome do cartão">
-                </div>
-                <div class="inputBox">
-                    <span>Número do cartão*</span>
-                    <input type="number" placeholder="1111-2222-3333-4444">
-                </div>
-                <div class="inputBox">
-                    <span>Cartão de validade*</span>
-                    <input type="text" placeholder="janeiro">
-                </div>
-
-                <div class="flex">
-                    <div class="inputBox">
-                        <span>ano de validade*</span>
-                        <input type="number" placeholder="2022">
-                    </div>
-                    <div class="inputBox">
-                        <span>CVV*</span>
-                        <input type="text" placeholder="1234">
-                    </div>
-                </div>
-
-            </div>
-    
-        </div>
-
-        <input type="submit" value="Pagar" class="submit-btn">
-
-    </form>
-
-</div>    
-    
+            <input type="submit" value="Pagar" class="submit-btn">
+        </form>
+    </div>
 </body>
+
 </html>

@@ -9,6 +9,7 @@ body{
     background-position: center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Evita que a imagem se repita */
     background-attachment: fixed; /* Faz o fundo ficar fixo ao rolar a página */
+    overflow-x: hidden;   
 }
 
 *{
