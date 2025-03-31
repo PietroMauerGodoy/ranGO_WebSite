@@ -1,6 +1,6 @@
 @font-face {
     font-family: "fonte";
-    src: url(Fonte/FilsonProBold.otf);
+    src: url("Fontes/FilsonProHeavy.otf");
 }
 
 body {
@@ -9,24 +9,34 @@ body {
     color: rgb(219, 219, 218);
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+
 }
+
+/* HEADER(CABEÇALHO)*/
 
 header {
     position: fixed;
-    top: 0%;
-    left: 0%;
-    width: 99%;
-    background-color: rgb(51, 116, 185);
+    width: 100%;
+    background-color: rgb(11, 14, 24);
     color: white;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
+    padding: 30px 20px;
+    z-index: 10;
+}
+
+header .logo {
+    position: absolute;
+    left: 20px;
 }
 
 header .logo img {
-    height: 50px;
+    height: 60px;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+   
 }
 
 header nav ul {
@@ -37,75 +47,167 @@ header nav ul {
 }
 
 header nav ul li {
-    margin-left: 28px;
-    font-size: 20PX;
-    margin: 0 1rem;
+    margin: 0 15px;
+    font-size: 18px;
 }
 
 header nav ul li a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
-    padding: 0.5rem;
+    padding: 6px 16px;
 }
+
 nav ul li a:hover {
-    background: #555;
+    color: rgb(220 184 97);
+}
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Tudo que tem no background*/
+
+.homeimage-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.image-overlay {
+    position: absolute;
+    top: -10;
+    left: 100;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 1;
+}
+
+
+
+.hero {
+    position: relative;
+    height: 100vh;
+
+
+    text-align: left;
+    overflow: hidden;
+
+}
+
+.hero-content {
+    position: absolute;
+    top: 10%;
+
+    left: 10%;
+
+    max-width: 489px;
+
+    z-index: 1;
+
+
+
+}
+
+
+.hero h2 {
+    color: #DBDBDA;
+    font-size: 67px;
+    line-height: 1;
+    margin-bottom: 30px;
+
+}
+
+.hero-content p {
+    color: #B0B0B0;
+    font-size: 21px !important;
+
+    line-height: 1;
+    margin-bottom: 50px;
+    text-align: justify;
+}
+
+.cta-btn {
+    background-color: rgb(220 184 97);
+    color: white;
+    padding: 20px 30px;
     border-radius: 5px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.banner {
-    height: 94vh;
-    background-image: url('backgrounde.jpg');
-    background: linear-gradient(rgb(11, 14, 24), );
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    align-items: center;
-    text-align: center;
-    padding: 94px 90px;
-
-
-
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
 
 }
 
+.cta-btn:hover {
+    background-color: rgb(218, 171, 61);
+}
 
+/* Responsividade para notebook */
+@media (max-width: 1440px) {
+    .hero-content {
+        top: 15%;
+        left: 8%;
+        max-width: 400px;
+    }
 
+    .hero h2 {
+        font-size: 50px;
+    }
 
+    .hero-content p {
+        font-size: 18px !important;
+        margin-bottom: 40px;
+    }
 
+    .cta-btn {
+        padding: 15px 25px;
+        font-size: 20px;
+    }
+}
 
+/* Responsividade para telas ainda menores (ex. tablets) */
+@media (max-width: 1024px) {
+    .hero-content {
+        top: 20%;
+        left: 5%;
+        max-width: 350px;
+    }
 
+    .hero h2 {
+        font-size: 40px;
+    }
 
+    .hero-content p {
+        font-size: 16px !important;
+        margin-bottom: 30px;
+    }
 
+    .cta-btn {
+        padding: 12px 20px;
+        font-size: 18px;
+    }
+}
 
-
-
-
-
-
+/* POPOUP */
 
 
 
@@ -120,24 +222,16 @@ nav ul li a:hover {
     max-width: 700%;
     height: 100%;
     padding: 120px;
-    background-color: white;
-    border-radius: 30px;
-    overflow: auto;
     background-color: rgba(0, 0, 0, 0.4);
     justify-content: center;
     align-items: center;
     transition: transform 0.3s ease, opacity 0.3s ease;
-
-
 }
 
 .popup-content h1 {
     color: rgb(51, 116, 185);
     font-size: 33px;
     position: relative;
-
-
-
 }
 
 form label[for="nome"] {
@@ -150,23 +244,15 @@ form input#nome {
 
 #nome {
     border: 2px solid #ccc;
-  
     padding: 10px;
-   
     border-radius: 5px;
-  
     font-size: 16px;
-  
 }
 
 #nome:focus {
     border-color: rgb(51, 116, 185);
-   
     outline: none;
-   
 }
-
-
 
 form label[for="email"] {
     color: rgba(0, 0, 0, 0.4);
@@ -180,37 +266,37 @@ form input#email {
     border: 2px solid #ccc;
 
     padding: 10px;
-  
+
     border-radius: 5px;
- 
+
     font-size: 16px;
-  
+
 }
 
 #email:focus {
     border-color: rgb(51, 116, 185);
-   
+
     outline: none;
-    
+
 }
 
 
 #telefone {
     border: 2px solid #ccc;
-    
+
     padding: 10px;
-   
+
     border-radius: 5px;
- 
+
     font-size: 16px;
-  
+
 }
 
 #telefone:focus {
     border-color: rgb(51, 116, 185);
-    
+
     outline: none;
-  
+
 }
 
 form label[for="telefone"] {
@@ -225,18 +311,18 @@ form input#telefone {
 
 #restaurante {
     border: 2px solid #ccc;
-    
+
     padding: 10px;
-   
+
     border-radius: 5px;
-  
+
     font-size: 16px;
 
 }
 
 #restaurante:focus {
     border-color: rgb(51, 116, 185);
- 
+
     outline: none;
 
 }
@@ -288,11 +374,6 @@ form label[for="produto"] {
 form input#produto {
     color: rgba(0, 0, 0, 0.4);
 }
-
-
-
-
-
 
 
 
@@ -353,7 +434,7 @@ form button:hover {
 
 form p {
     font-size: 14px;
-    color: rgb(11, 14, 24);
+    color: rgba(0, 0, 0, 0.6);
 }
 
 form p a {
@@ -365,15 +446,221 @@ form p a:hover {
     text-decoration: underline;
 }
 
+
+/* Responsividade para notebook */
+@media (max-width: 1440px) {
+    .popup {
+        max-width: 600px; /* Ajuste no tamanho do pop-up */
+        padding: 30px; /* Ajuste de padding para telas menores */
+    }
+    
+    .popup-content {
+        padding: 30px; /* Ajuste de padding no conteúdo */
+    }
+
+    .popup-content h1 {
+        font-size: 28px; /* Reduz tamanho da fonte do título */
+    }
+
+    form button {
+        padding: 12px;
+        font-size: 15px; /* Ajuste no tamanho do botão */
+    }
+}
+
+/* Responsividade para tablets */
+@media (max-width: 1024px) {
+    .popup {
+        max-width: 500px; /* Redução no tamanho do pop-up */
+        padding: 20px;
+    }
+    
+    .popup-content {
+        padding: 20px;
+    }
+
+    .popup-content h1 {
+        font-size: 24px; /* Redução adicional do tamanho da fonte */
+    }
+
+    form button {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+/* PRODUTO */
+
+
+.products {
+    padding: 50px 20px;
+    text-align: center;
+    font-size: 1.7rem;
+    
+}
+
+.product h2 {
+    color: rgb(219, 219, 218);
+    font-size: 2.5rem;
+    margin-top: 20px; 
+    margin-bottom: 10px;
+}
+
+.products p {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+   
+}
+
+.products .product-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.products .product {
+    width: 46%;
+    /* Aumenta o comprimento da caixa */
+    margin: 20px auto;
+    /* Centraliza a caixa horizontalmente */
+    text-align: center;
+    background-color: rgb(11, 14, 24);
+    border: 1px solid rgb(51, 116, 185);
+    padding: 250px;
+    /* Diminui o padding para ajustar */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+    /* Alinha a imagem e o texto verticalmente */
+    align-items: center;
+    /* Centraliza o conteúdo */
+    box-sizing: border-box;
+}
+
+.products .product p {
+    /* Altere 'p' para o seletor correto do seu texto */
+    margin-top: 40px;
+    /* Aumenta a margem superior do texto */
+}
+
+
+.product img {
+    width: 100%;
+    /* Ajusta a largura para 100% do contêiner pai */
+    max-width: 700px;
+    /* Define uma largura máxima */
+    height: auto;
+    /* Mantém a proporção da imagem */
+    object-fit: contain;
+    border-radius: 10px;
+
+    margin-bottom: -198px;
+    /* Mantém a margem inferior existente */
+}
+
+.text-container {
+    margin-top: 10px;
+    /* Espaço entre o texto e a caixa da imagem */
+}
+
+.text-container p {
+    font-size: 1.4rem;
+    /* Aumenta o tamanho da fonte do texto */
+    color: #fff;
+    transition: opacity 1s ease-in-out;
+    margin: 0;
+}
+
+/* Transição de imagens */
+.fade-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade-img.show {
+    opacity: 1;
+}
+
+@media (max-width: 1440px) {
+    .fade-img {
+        border-radius: 8px;
+        transition: opacity 0.8s ease-in-out; /* Animação mais rápida para telas menores */
+    }
+}
+
+/* Responsividade para tablets */
+@media (max-width: 1024px) {
+    .fade-img {
+        border-radius: 5px;
+        transition: opacity 0.6s ease-in-out; /* Ajuste para dispositivos menores */
+    }
+}
+
+/* Responsividade para notebooks */
+@media (max-width: 1440px) {
+    .products {
+        padding: 40px 15px;
+    }
+
+    .product h3 {
+        font-size: 2rem; /* Reduz o tamanho do título */
+    }
+
+    .products p {
+        font-size: 1.3rem; /* Ajusta o tamanho da fonte */
+    }
+
+    .products .product {
+        width: 48%; /* Aumenta um pouco a largura */
+        padding: 200px; /* Reduz o padding */
+    }
+
+    .product img {
+        max-width: 600px; /* Reduz o tamanho máximo da imagem */
+    }
+}
+
+/* Responsividade para tablets */
+@media (max-width: 1024px) {
+    .products .product-list {
+        flex-direction: column; /* Exibe os produtos em coluna */
+    }
+
+    .products .product {
+        width: 90%; /* Aumenta a largura para caber em telas menores */
+        padding: 150px; /* Reduz o padding para caber em tablets */
+    }
+
+    .product h3 {
+        font-size: 1.8rem; /* Reduz o tamanho do título */
+    }
+
+    .product img {
+        max-width: 500px; /* Reduz o tamanho máximo da imagem */
+        margin-bottom: -150px; /* Ajuste da margem inferior */
+    }
+
+    .text-container p {
+        font-size: 1.2rem; /* Reduz o tamanho do texto */
+    }
+}
+
 .about,
-.products,
 .contact {
     padding: 50px 20px;
     text-align: center;
     background-color: rgb(11, 14, 24);
-font-size: 21px;
+    font-size: 1.7rem;
     margin-bottom: 20px;
+
+
 }
+
 
 .about img {
     max-width: 100%;
@@ -383,50 +670,104 @@ font-size: 21px;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.products .product-list {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.products .product {
-    width: 30%;
-    margin: 20px 0;
+.pricing-section {
     text-align: center;
+    padding: 50px;
     background-color: rgb(11, 14, 24);
-    border: 1px solid rgb(51, 116, 185);
-    padding: 20px;
-    border-radius: 8px;
+    color: rgb(219, 219, 218);
 }
 
-.products .product img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
+.pricing-section h1 {
+    color: rgb(219, 219, 218);
+    font-size: 2.5rem;
     margin-bottom: 10px;
+
+}
+
+.pricing-section p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.pricing-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.card {
+    background-color: rgb(19, 22, 35);
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 340px;
+    /* Define uma altura mínima para garantir uniformidade */
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h2 {
+    color: rgb(218, 171, 61);
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.card ul {
+    list-style: none;
+    margin: 20px 0;
+    padding: 0;
+}
+
+.card ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: rgb(219, 219, 218);
+}
+
+.card button {
+    background-color: rgb(218, 171, 61);
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: rgb(11, 14, 24);
+    transition: background-color 0.3s ease;
+    margin-top: auto;
+    /* Garante que o botão fique na mesma altura */
+}
+
+.card button:hover {
+    background-color: rgb(190, 150, 50);
+}
+
+.popular {
+    background-color: rgb(24, 27, 42);
+    position: relative;
+}
+
+.popular::before {
+    content: "Mais Popular";
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(218, 171, 61);
+    color: rgb(11, 14, 24);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
 }
 
 .contact form {
@@ -461,66 +802,70 @@ font-size: 21px;
     font-size: 16px;
 }
 
+/* Responsividade para notebooks */
+@media (max-width: 1440px) {
+    .pricing-section h1 {
+        font-size: 2.2rem;
+    }
 
+    .card {
+        width: 220px;
+        padding: 15px;
+        min-height: 320px;
+    }
 
+    .card h2 {
+        font-size: 1.4rem;
+    }
 
+    .pricing-section p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Responsividade para tablets */
+@media (max-width: 1024px) {
+    .pricing-cards {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .pricing-section h1 {
+        font-size: 2rem;
+    }
+
+    .card {
+        width: 90%;
+        padding: 20px;
+        margin: 0 auto;
+        min-height: auto;
+    }
+
+    .card h2 {
+        font-size: 1.3rem;
+    }
+
+    .contact form button {
+        font-size: 15px;
+        padding: 10px;
+    }
+}
+
+/*FOOTER(RODAPÉ)*/
 
 
 footer {
-    background-color: rgb(51, 116, 185);
-    color: white;
+    background-color: rgb(11, 14, 24);
+
+    font-size: 1.2em;
+    padding: 20px 0;
     text-align: center;
-    padding: 20px;
+    margin-top: 50px;
 }
 
-.banner h1 {
-    color: #fff;
-    font-size: 60px;
-    font-weight: 600;
-}
+footer p {
+    margin: 0;
 
-.banner p {
-    font-size: 30px;
-    text-align: center;
-    font-weight: 600;
-}
-
-
-header nav ul li a:hover {
-    text-decoration: none;
-    color: rgb(220 184 97);
-    font-size: 21px;
-
-}
-
-.image-overlay {
-    position: absolute;
-    /* Permite posicionamento absoluto dentro do container */
-    top: 69%;
-    /* Ajusta a posição vertical da imagem sobreposta */
-    left: 50%;
-    /* Ajusta a posição horizontal da imagem sobreposta */
-    transform: translate(30%, -20%);
-    /* Centraliza a imagem */
-
-}
-
-.image-overlay2 {
-    position: absolute;
-    /* Permite posicionamento absoluto dentro do container */
-    top: 22%;
-    /* Ajusta a posição vertical da imagem sobreposta */
-    left: -90%;
-    /* Ajusta a posição horizontal da imagem sobreposta */
-    transform: translate(-77%, -20%);
-    /* Centraliza a imagem */
-}
-
-.image-overlay img {
-    max-width: 100%;
-    /* Garante que a imagem não ultrapasse o tamanho do container */
-    height: auto;
-    /* Mantém a proporção da imagem */
 }
 
 
@@ -554,6 +899,7 @@ header nav ul li a:hover {
     font-size: 16px;
     /* Tamanho da seta */
 }
+
 /* Adicionar estilo para o slider */
 .slider {
     position: relative;
@@ -571,12 +917,14 @@ header nav ul li a:hover {
 }
 
 .about {
-    
+
     background-color: rgb(219, 219, 218);
-     
-        padding-top: 80px; /* Ajuste o valor conforme necessário */
-        margin-top: -80px; /* Compensa o padding para não alterar a estrutura */
-    
+
+    padding-top: 80px;
+    /* Ajuste o valor conforme necessário */
+    margin-top: -80px;
+    /* Compensa o padding para não alterar a estrutura */
+
 }
 
 .about h2 {
@@ -592,45 +940,46 @@ header nav ul li a:hover {
     color: rgb(51, 116, 185);
 }
 
-/* Estilo da equipe */
-.team {
-    background-color: rgb(11, 14, 24);
-    color: rgb(219, 219, 218);
-    padding: 20px;
-    border-radius: 8px;
+/* Responsividade para notebooks */
+@media (max-width: 1440px) {
+    footer {
+        font-size: 1.1em;
+        padding: 15px 0;
+    }
+
+    .select-container {
+        max-width: 250px;
+    }
+
+    .about h2 {
+        font-size: 28px;
+    }
+
+    .about p {
+        font-size: 16px;
+    }
 }
 
-.team h3 {
-    font-size: 28px;
-    margin-bottom: 20px;
-}
+/* Responsividade para tablets */
+@media (max-width: 1024px) {
+    footer {
+        font-size: 1em;
+        padding: 10px 0;
+    }
 
-.team-members {
-    display: flex;
-    gap: 40px;
-    justify-content: center;
-}
+    .select-container {
+        max-width: 100%;
+    }
 
-.member {
-    text-align: center;
-}
+    .about h2 {
+        font-size: 24px;
+    }
 
-.member img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-bottom: 10px;
+    .about p {
+        font-size: 15px;
+    }
 
-
-    border: 3px solid rgb(51, 116, 185);
-}
-
-.member h4 {
-    font-size: 20px;
-    margin-bottom: 5px;
-}
-
-.member p {
-    font-size: 16px;
-    color: rgb(51, 116, 185);
+    .slider {
+        width: 100%;
+    }
 }

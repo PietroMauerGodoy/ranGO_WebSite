@@ -1,111 +1,122 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ranGO! | Facilidade e praticidade no uso de sistemas </title>
-    <link rel="shortcut icon" href="imagens/icone-rango-1.png" type="image/x-icon">
+    <title>ranGO! | Facilidade e praticidade no uso de sistemas</title>
+    <link rel="shortcut icon" href="icon/iconBarra.png" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="Fontes/FilsonProHeavy.otf">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
     <header>
         <div class="logo">
-            <img src="33873de188d5edf049177d77f7e4a9b8.png" alt="ranGO! Logo">
+            <img src="icon/logo.png" alt="ranGO! Logo">
         </div>
-        
-        <nav>   
+
+        <nav>
             <ul>
                 <li><a href="#home">Início</a></li>
-                <li><a href="#about">Sobre Nós</a></li>
                 <li><a href="#products">Produtos</a></li>
+                <li><a href="sobre-nos.html">Sobre Nós</a></li>
                 <li><a href="#" id="contact-btn">Contato</a></li>
+
             </ul>
         </nav>
     </header>
 
-    <section id="home" class="banner">
-        
-            
-                <div class="image-overlay2">
-                    <img src="GO!.jpg" alt="Imagem Sobreposta"> 
-                </div>
-            
+    <section id="home">
+        <div class="image-overlay">
+            <img src="fundo/background.jpg" alt="Imagem Sobreposta">
 
-            
-        
-        
-        <h1>Bem-vindo à ranGO!</h1>
-        <p>Facilidade e praticidade no uso de sistemas e aplicativos para todos.</p>
-    </section>
-
-    <section id="about" class="about">
-        <h2>Sobre Nós</h2>
-        <p>
-            A ranGO! é uma empresa dedicada a desenvolver softwares acessíveis para pessoas com pouco conhecimento em informática.
-            Nossos produtos oferecem opções de acessibilidade como temas claros ou escuros, alteração no tamanho de elementos gráficos e textos, 
-            e comandos por voz. A personalização é uma prioridade, permitindo que nossos clientes adaptem a interface conforme suas preferências. 
-            Além disso, todos os nossos aplicativos utilizam um sistema automático de salvamento em nuvem, garantindo segurança e acessibilidade aos dados.
-        </p>
-        
-        <div class="team">
-            <h3>Nossa Equipe</h3>
-            <div class="team-members">
-                <div class="member">
-                    <img src="pietro.jpeg" alt="Integrante 1">
-                    <h4>Kaique Alves Oliveira</h4>
-                    <p>Gerente Administrativo</p>
-                </div>
-                <div class="member">
-                    <img src="pietro.jpeg" alt="Integrante 2">
-                    <h4>Kenji Fernandes Wakabayashi</h4>
-                    <p>Gerente de Marketing</p>
-                </div>
-                <div class="member">
-                    <img src="pietro.jpeg" alt="Integrante 3">
-                    <h4>Luis Felipe Scacchetti</h4>
-                    <p>Programador</p>
-                </div>
-                <div class="member">
-                    <img src="pietro.jpeg" alt="Integrante 4">
-                    <h4>Pietro Mauer Godoy</h4>
-                    <p>Programador Web</p>
-                </div>
-            </div>
         </div>
+
+
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Escolha inteligente para otimizar seu restaurante</h2>
+                <p>Simplifique, agilize e pavimente o sucesso com a nossa solução exclusiva de logística.</p>
+                <a href="sobre-nos.html" class="cta-btn">Sobre Nós</a>
+            </div>
+        </section>
     </section>
+
 
     <section id="products" class="products">
-        <h2>Produtos</h2>
+        <h2>Produto</h2>
+        <p>Uma solução projetada para ser intuitiva e acessível, garantindo uma experiência de uso fluida e prático.</p>
+
+
         <div class="product-list">
             <div class="product">
-                <img src="33873de188d5edf049177d77f7e4a9b8.png" alt="Software de Gestão de Estoque">
-                <h3>Gestão de Estoque</h3>
-                <p>Solução completa para gerenciamento de estoques com foco em simplicidade e eficiência.</p>
+                <img id="image1" src="telas/tela login.png" alt="Imagem 1" class="fade-img show">
+                <img id="image2" src="telas/tela home.png" alt="Imagem 2" class="fade-img">
+                <img id="image3" src="telas/tela dash.png" alt="Imagem 3" class="fade-img">
+                <img id="image4" src="telas/tela estoque.png" alt="Imagem 4" class="fade-img">
+                <img id="image5" src="telas/tela fornecedor.png" alt="Imagem 5" class="fade-img">
+                <img id="image6" src="telas/tela pedidos.png" alt="Imagem 6" class="fade-img">
+                <img id="image7" src="telas/tela config.png" alt="Imagem 7" class="fade-img">
+
+
             </div>
-            <div class="product">
-                <img src="33873de188d5edf049177d77f7e4a9b8.png" alt="Sistema de Vendas">
-                <h3>Sistema de Vendas</h3>
-                <p>Ferramenta integrada para controle de vendas.</p>
-            </div>
-            
+        </div>
+
+        <div class="text-container">
+            <p id="text">Login</p>
         </div>
     </section>
 
 
 
+    <section id="plans" class="pricing-section">
+        <h1>Planos & Preços</h1>
+        <p>A ferramenta é 100% gratuita! Esta é apenas uma seção genérica.</p>
 
+        <div class="pricing-cards">
+            <div class="card">
+                <h2>Básico</h2>
+                <p>R$ 70,00 / mês</p>
+                <ul>
+                    <li>Dashboard customizável</li>
+                    <li>Gestão de estoque</li>
+                    <li>Criação e gestão de cardápios</li>
+                    <li>Notificações de baixo estoque e perfil da empresa</li>
 
+                </ul>
+                <button onclick="goToPaymentPage('Básico', 70)">Assinar</button>
+            </div>
 
+            <div class="card popular">
+                <h2>Médio</h2>
+                <p>R$ 85,00 / mês</p>
+                <ul>
+                    <li>Todos os recursos existentes no plano básico</li>
+                    <li>+Área de fornecedores</li>
+                    <li>+Notificações de fornecedores</li>
 
+                </ul>
+                <button onclick="goToPaymentPage('Médio', 85)">Assinar</button>
+            </div>
 
+            <div class="card">
+                <h2>Premium</h2>
+                <p>R$ 100,00 / mês</p>
+                <ul>
+                    <li>Todos os recursos existentes no plano básico e Médio</li>
+                    <li>+Painel de gerente</li>
+                    <li>+Ánalise gráfica de vendas</li>
+                    <li>+Controle de desempenho de funcionários</li>
+                    <li>+Sistema de pedidos(Automação)</li>
+                </ul>
+                <button onclick="goToPaymentPage('Premium', 100)">Assinar</button>
 
+            </div>
+        </div>
+    </section>
 
-
-
-
-
-
-    
     <footer>
         <p>© 2024 ranGO! - Todos os direitos reservados.</p>
     </footer>
@@ -117,31 +128,35 @@
             <form action="#" method="post">
                 <label for="nome">Nome completo*</label>
                 <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
-                
+
                 <label for="email">e-mail*</label>
                 <input type="email" id="email" name="email" placeholder="seunome@email.com.br" required>
-                
+
                 <label for="telefone">Telefone para contato*</label>
                 <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
-                
+
                 <label for="restaurante">Nome do restaurante*</label>
-                <input type="text" id="restaurante" name="restaurante" placeholder="Digite o nome do seu restaurante" required>
-                
-                <label for="produto">Qual produto tem interesse?*</label>
+                <input type="text" id="restaurante" name="restaurante" placeholder="Digite o nome do seu restaurante"
+                    required>
+
+                <label for="produto">Qual plano tem interesse?*</label>
                 <select id="produto" name="produto" required>
-                    <option value="">Selecione um produto</option>
-                    <option value="produto1">Produto 1</option>
-                    <option value="produto2">Produto 2</option>
-                    <option value="produto3">Produto 3</option>
+                    <option value="">Selecione um plano</option>
+                    <option value="produto1">Básico</option>
+                    <option value="produto2">Médio</option>
+                    <option value="produto3">Primium</option>
                 </select>
-                
-                <p>Ao me cadastrar, concordo com os <a href="#">Termos de Uso</a> e com a <a href="#">Política de Privacidade</a> da ranGO!</p>
-                
+
+                <p>Ao me cadastrar, concordo com os <a href="#">Termos de Uso</a> e com a <a href="#">Política de
+                        Privacidade</a> da ranGO!</p>
+
                 <button type="submit">Enviar meus dados</button>
             </form>
         </div>
 
+      
+
         <script src="script.js"></script>
-    
 </body>
+
 </html>
