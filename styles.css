@@ -1,53 +1,32 @@
 @font-face {
-    font-family: "titulo";
-    src: url("Fontes/FilsonProHeavy.otf");
-}
-
-
-@font-face {
-    font-family: "subTitulo";
-    src: url("Fontes/FilsonProRegular.otf");
-}
-
-@font-face {
-    font-family: "botao";
-    src: url("Fontes/FilsonProBold.otf");
+    font-family: "fonte";
+    src: url(Fonte/FilsonProBold.otf);
 }
 
 body {
-
+    font-family: fonte;
     background-color: rgb(11, 14, 24);
     color: rgb(219, 219, 218);
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
 }
-
-/* HEADER(CABEÇALHO)*/
 
 header {
-    font-family: titulo;
     position: fixed;
-    width: 100%;
-    background-color: rgb(11, 14, 24);
+    top: 0%;
+    left: 0%;
+    width: 99%;
+    background-color: rgb(51, 116, 185);
     color: white;
-    padding: 30px 20px;
-    z-index: 10;
-}
-
-header .logo {
-    position: absolute;
-    left: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
 }
 
 header .logo img {
-    height: 60px;
-}
-
-header nav {
-    display: flex;
-    justify-content: center;
-   
+    height: 50px;
 }
 
 header nav ul {
@@ -58,218 +37,74 @@ header nav ul {
 }
 
 header nav ul li {
-    margin: 0 15px;
-    font-size: 18px;
+    margin-left: 28px;
+    font-size: 20PX;
+    margin: 0 1rem;
 }
 
 header nav ul li a {
     color: white;
     text-decoration: none;
-    padding: 6px 16px;
-}
-
-nav ul li a:hover {
-    color: rgb(220 184 97);
-}
-
-@media (max-width: 768px) {
-
-    header {
-        flex-direction: column;
-        padding: 15px;
-    }
-
-    header nav ul {
-        flex-direction: column;
-        margin-top: 10px;
-    }
-
-    header nav ul li {
-        margin: 10px 0;
-    }
-}
-
-/* Tudo que tem no background*/
-
-.homeimage-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 80vh;
-    object-fit: cover;
-    z-index: 1;
-}
-
-/* Responsividade para notebooks */
-@media (max-width: 1440px) {
-    .homeimage-overlay {
-        height: 90vh; /* Reduz a altura para melhor visualização em notebooks */
-    }
-}
-
-/* Responsividade para tablets */
-@media (max-width: 1024px) {
-    .homeimage-overlay {
-        height: 80vh; /* Ajusta a altura para tablets */
-    }
-}
-
-/* Responsividade para smartphones */
-@media (max-width: 768px) {
-    .homeimage-overlay {
-        height: 70vh; /* Ajusta a altura para smartphones */
-        object-fit: contain; /* Ajusta o conteúdo da imagem para caber melhor em telas menores */
-    }
-}
-
-.image-overlay {
-    position: absolute;
-    top: -10;
-    left: 100;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    z-index: 1;
-}
-
-/* Responsividade para notebooks */
-@media (max-width: 1440px) {
-    .image-overlay {
-        top: 0; /* Ajusta o valor de 'top' para melhorar a visualização */
-        left: 50px; /* Reduz o deslocamento à esquerda */
-        height: 90vh;
-    }
-}
-
-/* Responsividade para tablets */
-@media (max-width: 1024px) {
-    .image-overlay {
-        top: 0;
-        left: 30px;
-        height: 80vh;
-    }
-}
-
-/* Responsividade para smartphones */
-@media (max-width: 768px) {
-    .image-overlay {
-        top: 0;
-        left: 0; /* Remove deslocamento para melhor ajuste */
-        height: 70vh;
-        object-fit: contain; /* Ajusta o conteúdo da imagem para caber melhor */
-    }
-}
-
-.hero {
-    position: relative;
-    height: 100vh;
-
-
-    text-align: left;
-    overflow: hidden;
-
-}
-
-.hero-content {
-    position: absolute;
-    top: 10%;
-
-    left: 10%;
-
-    max-width: 489px;
-
-    z-index: 1;
-
-
-
-}
-
-
-.hero h2 {
-    font-family: titulo;
-    color: #DBDBDA;
-    font-size: 65px;
-    line-height: 1;
-    margin-bottom: 30px;
-
-}
-
-.hero-content p {
-    font-family: subTitulo;
-    color: #B0B0B0;
-    font-size: 23px !important;
-
-    line-height: 1;
-    margin-bottom: 50px;
-    text-align: justify;
-}
-
-.cta-btn {
-    font-family: botao;
-    background-color: rgb(220 184 97);
-    color: white;
-    padding: 20px 30px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 22px;
     font-weight: bold;
-    display: inline-block;
-    margin-top: 10px;
+    padding: 0.5rem;
+}
+nav ul li a:hover {
+    background: #555;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.banner {
+    height: 94vh;
+    background-image: url('backgrounde.jpg');
+    background: linear-gradient(rgb(11, 14, 24), );
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center;
+    text-align: center;
+    padding: 94px 90px;
+
+
+
 
 }
 
-.cta-btn:hover {
-    background-color: rgb(218, 171, 61);
-}
 
-/* Responsividade para notebook */
-@media (max-width: 1440px) {
-    .hero-content {
-        top: 15%;
-        left: 8%;
-        max-width: 400px;
-    }
 
-    .hero h2 {
-        font-size: 50px;
-    }
 
-    .hero-content p {
-        font-size: 18px !important;
-        margin-bottom: 40px;
-    }
 
-    .cta-btn {
-        padding: 15px 25px;
-        font-size: 20px;
-    }
-}
 
-/* Responsividade para telas ainda menores (ex. tablets) */
-@media (max-width: 1024px) {
-    .hero-content {
-        top: 20%;
-        left: 5%;
-        max-width: 350px;
-    }
 
-    .hero h2 {
-        font-size: 40px;
-    }
 
-    .hero-content p {
-        font-size: 16px !important;
-        margin-bottom: 30px;
-    }
 
-    .cta-btn {
-        padding: 12px 20px;
-        font-size: 18px;
-    }
-}
 
-/* POPOUP */
+
+
+
+
 
 
 
@@ -285,21 +120,27 @@ nav ul li a:hover {
     max-width: 700%;
     height: 100%;
     padding: 120px;
+    background-color: white;
+    border-radius: 30px;
+    overflow: auto;
     background-color: rgba(0, 0, 0, 0.4);
     justify-content: center;
     align-items: center;
     transition: transform 0.3s ease, opacity 0.3s ease;
+
+
 }
 
 .popup-content h1 {
-    font-family: titulo;
     color: rgb(51, 116, 185);
     font-size: 33px;
     position: relative;
+
+
+
 }
 
 form label[for="nome"] {
-    font-family: subTitulo;
     color: rgba(0, 0, 0, 0.4);
 }
 
@@ -308,20 +149,26 @@ form input#nome {
 }
 
 #nome {
-    font-family: subTitulo;
     border: 2px solid #ccc;
+  
     padding: 10px;
+   
     border-radius: 5px;
+  
     font-size: 16px;
+  
 }
 
 #nome:focus {
     border-color: rgb(51, 116, 185);
+   
     outline: none;
+   
 }
 
+
+
 form label[for="email"] {
-    font-family: subTitulo;
     color: rgba(0, 0, 0, 0.4);
 }
 
@@ -330,46 +177,43 @@ form input#email {
 }
 
 #email {
-    font-family: subTitulo;
     border: 2px solid #ccc;
 
     padding: 10px;
-
+  
     border-radius: 5px;
-
+ 
     font-size: 16px;
-
+  
 }
 
 #email:focus {
     border-color: rgb(51, 116, 185);
-
+   
     outline: none;
-
+    
 }
 
 
 #telefone {
-    font-family: subTitulo;
     border: 2px solid #ccc;
-
+    
     padding: 10px;
-
+   
     border-radius: 5px;
-
+ 
     font-size: 16px;
-
+  
 }
 
 #telefone:focus {
     border-color: rgb(51, 116, 185);
-
+    
     outline: none;
-
+  
 }
 
 form label[for="telefone"] {
-    font-family: subTitulo;
     color: rgba(0, 0, 0, 0.4);
 }
 
@@ -380,26 +224,24 @@ form input#telefone {
 
 
 #restaurante {
-    font-family: subTitulo;
     border: 2px solid #ccc;
-
+    
     padding: 10px;
-
+   
     border-radius: 5px;
-
+  
     font-size: 16px;
 
 }
 
 #restaurante:focus {
     border-color: rgb(51, 116, 185);
-
+ 
     outline: none;
 
 }
 
 form label[for="restaurante"] {
-    font-family: subTitulo;
     color: rgba(0, 0, 0, 0.4);
 }
 
@@ -409,7 +251,6 @@ form input#restaurante {
 
 
 #produto {
-    font-family: subTitulo;
     background-color: #fcfcfc;
 
     color: rgba(0, 0, 0, 0.4);
@@ -436,20 +277,22 @@ form input#restaurante {
 }
 
 #produto:focus {
-    
     outline: none;
     border-color: rgb(51, 116, 185);
 }
 
 form label[for="produto"] {
-    font-family: subTitulo;
     color: rgba(0, 0, 0, 0.4);
 }
 
 form input#produto {
-    font-family: subTitulo;
     color: rgba(0, 0, 0, 0.4);
 }
+
+
+
+
+
 
 
 
@@ -484,7 +327,6 @@ form label {
 
 form input,
 form select {
-    font-family: subTitulo;
     width: 100%;
     padding: 10px;
     margin-top: 5px;
@@ -494,7 +336,6 @@ form select {
 }
 
 form button {
-    font-family: subTitulo;
     width: 100%;
     padding: 15px;
     background-color: rgb(51, 116, 185);
@@ -507,14 +348,12 @@ form button {
 }
 
 form button:hover {
-    font-family: subTitulo;
     background-color: rgb(51, 116, 185);
 }
 
 form p {
-    font-family: subTitulo;
     font-size: 14px;
-    color: #888;
+    color: rgb(11, 14, 24);
 }
 
 form p a {
@@ -526,224 +365,15 @@ form p a:hover {
     text-decoration: underline;
 }
 
-
-/* Responsividade para notebook */
-@media (max-width: 1440px) {
-    .popup {
-        max-width: 600px; /* Ajuste no tamanho do pop-up */
-        padding: 30px; /* Ajuste de padding para telas menores */
-    }
-    
-    .popup-content {
-        padding: 30px; /* Ajuste de padding no conteúdo */
-    }
-
-    .popup-content h1 {
-        font-size: 28px; /* Reduz tamanho da fonte do título */
-    }
-
-    form button {
-        padding: 12px;
-        font-size: 15px; /* Ajuste no tamanho do botão */
-    }
-}
-
-/* Responsividade para tablets */
-@media (max-width: 1024px) {
-    .popup {
-        max-width: 500px; /* Redução no tamanho do pop-up */
-        padding: 20px;
-    }
-    
-    .popup-content {
-        padding: 20px;
-    }
-
-    .popup-content h1 {
-        font-size: 24px; /* Redução adicional do tamanho da fonte */
-    }
-
-    form button {
-        padding: 10px;
-        font-size: 14px;
-    }
-}
-
-/* PRODUTO */
-
-
-.products {
-    padding: 50px 20px;
-    text-align: center;
-    font-size: 1.7rem;
-}
-
-.products h2 {
-    font-family: titulo;
-    color: rgb(219, 219, 218);
-    font-size: 2.5rem;
-    margin-top: 187px;
-    margin-bottom: 10px;
-}
-    
-
-.products p {
-    font-family: subTitulo;
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-}
-
-.products .product-list {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.products .product {
-    width: 46%;
-    /* Aumenta o comprimento da caixa */
-    margin: 20px auto;
-    /* Centraliza a caixa horizontalmente */
-    text-align: center;
-    background-color: rgb(11, 14, 24);
-    border: 1px solid rgb(51, 116, 185);
-    padding: 250px;
-    /* Diminui o padding para ajustar */
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column-reverse;
-    /* Alinha a imagem e o texto verticalmente */
-    align-items: center;
-    /* Centraliza o conteúdo */
-    box-sizing: border-box;
-}
-
-.products .product p {
-    /* Altere 'p' para o seletor correto do seu texto */
-    margin-top: 40px;
-    /* Aumenta a margem superior do texto */
-}
-
-
-.product img {
-    width: 100%;
-    /* Ajusta a largura para 100% do contêiner pai */
-    max-width: 700px;
-    /* Define uma largura máxima */
-    height: auto;
-    /* Mantém a proporção da imagem */
-    object-fit: contain;
-    border-radius: 10px;
-
-    margin-bottom: -198px;
-    /* Mantém a margem inferior existente */
-}
-
-.text-container {
-    margin-top: 10px;
-    /* Espaço entre o texto e a caixa da imagem */
-}
-
-.text-container p {
-    font-size: 1.4rem;
-    /* Aumenta o tamanho da fonte do texto */
-    color: #fff;
-    transition: opacity 1s ease-in-out;
-    margin: 0;
-}
-
-/* Transição de imagens */
-.fade-img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-.fade-img.show {
-    opacity: 1;
-}
-
-@media (max-width: 1440px) {
-    .fade-img {
-        border-radius: 8px;
-        transition: opacity 0.8s ease-in-out; /* Animação mais rápida para telas menores */
-    }
-}
-
-/* Responsividade para tablets */
-@media (max-width: 1024px) {
-    .fade-img {
-        border-radius: 5px;
-        transition: opacity 0.6s ease-in-out; /* Ajuste para dispositivos menores */
-    }
-}
-
-/* Responsividade para notebooks */
-@media (max-width: 1440px) {
-    .products {
-        padding: 40px 15px;
-    }
-
-    .product h2 {
-        font-size: 2rem; /* Reduz o tamanho do título */
-        margin-top: -137px;
-    }
-
-    .products p {
-        font-size: 1.3rem; /* Ajusta o tamanho da fonte */
-    }
-
-    .products .product {
-        width: 48%; /* Aumenta um pouco a largura */
-        padding: 200px; /* Reduz o padding */
-    }
-
-    .product img {
-        max-width: 600px; /* Reduz o tamanho máximo da imagem */
-    }
-}
-
-/* Responsividade para tablets */
-@media (max-width: 1024px) {
-    .products .product-list {
-        flex-direction: column; /* Exibe os produtos em coluna */
-    }
-
-    .products .product {
-        width: 90%; /* Aumenta a largura para caber em telas menores */
-        padding: 150px; /* Reduz o padding para caber em tablets */
-    }
-
-    .product h3 {
-        font-size: 1.8rem; /* Reduz o tamanho do título */
-        margin-top: 200px;
-    }
-
-    .product img {
-        max-width: 500px; /* Reduz o tamanho máximo da imagem */
-        margin-bottom: -150px; /* Ajuste da margem inferior */
-    }
-
-    .text-container p {
-        font-size: 1.2rem; /* Reduz o tamanho do texto */
-    }
-}
-
 .about,
+.products,
 .contact {
     padding: 50px 20px;
     text-align: center;
     background-color: rgb(11, 14, 24);
-    font-size: 1.7rem;
+font-size: 21px;
     margin-bottom: 20px;
-
-
 }
-
 
 .about img {
     max-width: 100%;
@@ -753,109 +383,50 @@ form p a:hover {
 }
 
 
-.pricing-section {
-    text-align: center;
-    padding: 50px;
-    background-color: rgb(11, 14, 24);
-    color: rgb(219, 219, 218);
-}
 
-.pricing-section h1 {
-    font-family: titulo;
-    color: rgb(219, 219, 218);
-    font-size: 2.5rem;
-    margin-bottom: 10px;
 
-}
 
-.pricing-section p {
-    font-family: subTitulo;
-    font-size: 1.2rem;
-    margin-bottom: 40px;
-}
 
-.pricing-cards {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.products .product-list {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-.card {
-    background-color: rgb(19, 22, 35);
-    border-radius: 10px;
-    padding: 20px;
-    width: 250px;
-    text-align: left;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 340px;
-    /* Define uma altura mínima para garantir uniformidade */
-    transition: transform 0.3s ease-in-out;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-.card h2 {
-    font-family: titulo;
-    color: rgb(218, 171, 61);
-    margin-bottom: 10px;
-    font-size: 1.5rem;
-}
-
-.card ul {
-    list-style: none;
+.products .product {
+    width: 30%;
     margin: 20px 0;
-    padding: 0;
+    text-align: center;
+    background-color: rgb(11, 14, 24);
+    border: 1px solid rgb(51, 116, 185);
+    padding: 20px;
+    border-radius: 8px;
 }
 
-.card ul li {
-    font-family: subTitulo;
+.products .product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
     margin-bottom: 10px;
-    font-size: 1rem;
-    color: rgb(219, 219, 218);
-}
-
-.card button {
-    font-family: botao;
-    background-color: rgb(218, 171, 61);
-    border: none;
-    padding: 10px;
-    width: 100%;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    color: rgb(11, 14, 24);
-    transition: background-color 0.3s ease;
-    margin-top: auto;
-    /* Garante que o botão fique na mesma altura */
-}
-
-.card button:hover {
-    background-color: rgb(190, 150, 50);
-}
-
-.popular {
-    background-color: rgb(24, 27, 42);
-    position: relative;
-}
-
-.popular::before {
-    content: "Mais Popular";
-    position: absolute;
-    top: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgb(218, 171, 61);
-    color: rgb(11, 14, 24);
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: bold;
 }
 
 .contact form {
@@ -890,71 +461,66 @@ form p a:hover {
     font-size: 16px;
 }
 
-/* Responsividade para notebooks */
-@media (max-width: 1440px) {
-    .pricing-section h1 {
-        font-size: 2.2rem;
-    }
 
-    .card {
-        width: 220px;
-        padding: 15px;
-        min-height: 320px;
-    }
 
-    .card h2 {
-        font-size: 1.4rem;
-    }
 
-    .pricing-section p {
-        font-size: 1.1rem;
-    }
-}
-
-/* Responsividade para tablets */
-@media (max-width: 1024px) {
-    .pricing-cards {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .pricing-section h1 {
-        font-size: 2rem;
-    }
-
-    .card {
-        width: 90%;
-        padding: 20px;
-        margin: 0 auto;
-        min-height: auto;
-    }
-
-    .card h2 {
-        font-size: 1.3rem;
-    }
-
-    .contact form button {
-        font-size: 15px;
-        padding: 10px;
-    }
-}
-
-/*FOOTER(RODAPÉ)*/
 
 
 footer {
-    font-family: titulo;
-    background-color: rgb(11, 14, 24);
-
-    font-size: 1.2em;
-    padding: 20px 0;
+    background-color: rgb(51, 116, 185);
+    color: white;
     text-align: center;
-    margin-top: 50px;
+    padding: 20px;
 }
 
-footer p {
-    margin: 0;
+.banner h1 {
+    color: #fff;
+    font-size: 60px;
+    font-weight: 600;
+}
 
+.banner p {
+    font-size: 30px;
+    text-align: center;
+    font-weight: 600;
+}
+
+
+header nav ul li a:hover {
+    text-decoration: none;
+    color: rgb(220 184 97);
+    font-size: 21px;
+
+}
+
+.image-overlay {
+    position: absolute;
+    /* Permite posicionamento absoluto dentro do container */
+    top: 69%;
+    /* Ajusta a posição vertical da imagem sobreposta */
+    left: 50%;
+    /* Ajusta a posição horizontal da imagem sobreposta */
+    transform: translate(30%, -20%);
+    /* Centraliza a imagem */
+
+}
+
+.image-overlay2 {
+    position: absolute;
+    /* Permite posicionamento absoluto dentro do container */
+    top: 22%;
+    /* Ajusta a posição vertical da imagem sobreposta */
+    left: -90%;
+    /* Ajusta a posição horizontal da imagem sobreposta */
+    transform: translate(-77%, -20%);
+    /* Centraliza a imagem */
+}
+
+.image-overlay img {
+    max-width: 100%;
+    /* Garante que a imagem não ultrapasse o tamanho do container */
+    height: auto;
+    /* Mantém a proporção da imagem */
 }
 
 
@@ -988,7 +554,6 @@ footer p {
     font-size: 16px;
     /* Tamanho da seta */
 }
-
 /* Adicionar estilo para o slider */
 .slider {
     position: relative;
@@ -1006,14 +571,12 @@ footer p {
 }
 
 .about {
-
+    
     background-color: rgb(219, 219, 218);
-
-    padding-top: 80px;
-    /* Ajuste o valor conforme necessário */
-    margin-top: -80px;
-    /* Compensa o padding para não alterar a estrutura */
-
+     
+        padding-top: 80px; /* Ajuste o valor conforme necessário */
+        margin-top: -80px; /* Compensa o padding para não alterar a estrutura */
+    
 }
 
 .about h2 {
@@ -1029,46 +592,45 @@ footer p {
     color: rgb(51, 116, 185);
 }
 
-/* Responsividade para notebooks */
-@media (max-width: 1440px) {
-    footer {
-        font-size: 1.1em;
-        padding: 15px 0;
-    }
-
-    .select-container {
-        max-width: 250px;
-    }
-
-    .about h2 {
-        font-size: 28px;
-    }
-
-    .about p {
-        font-size: 16px;
-    }
+/* Estilo da equipe */
+.team {
+    background-color: rgb(11, 14, 24);
+    color: rgb(219, 219, 218);
+    padding: 20px;
+    border-radius: 8px;
 }
 
-/* Responsividade para tablets */
-@media (max-width: 1024px) {
-    footer {
-        font-size: 1em;
-        padding: 10px 0;
-    }
+.team h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
 
-    .select-container {
-        max-width: 100%;
-    }
+.team-members {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
 
-    .about h2 {
-        font-size: 24px;
-    }
+.member {
+    text-align: center;
+}
 
-    .about p {
-        font-size: 15px;
-    }
+.member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
 
-    .slider {
-        width: 100%;
-    }
+
+    border: 3px solid rgb(51, 116, 185);
+}
+
+.member h4 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.member p {
+    font-size: 16px;
+    color: rgb(51, 116, 185);
 }

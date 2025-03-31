@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ranGO! | Facilidade e praticidade no uso de sistemas </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="33873de188d5edf049177d77f7e4a9b8.png" alt="ranGO! Logo">
+            
+
+        </div>
+        
+        <nav>   
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#about">Sobre Nós</a></li>
+                <li><a href="#products">Produtos</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="banner">
+        
+            <div class="image-overlay">
+                <img src="33873de188d5edf049177d77f7e4a9b8.png" alt="Imagem Sobreposta"> 
+                <div class="image-overlay2">
+                    <img src="33873de188d5edf049177d77f7e4a9b8.png" alt="Imagem Sobreposta"> 
+                </div>
+            </div>
+
+            
+        
+        
+        <h1>Bem-vindo à ranGO!</h1>
+        <p>Facilidade e praticidade no uso de sistemas e aplicativos para todos.</p>
+    </section>
+
+    <section id="about" class="about">
+        <h2>Sobre Nós</h2>
+        <p>A ranGO! é uma empresa dedicada a desenvolver softwares acessíveis para pessoas com pouco conhecimento em informática. Nossos produtos oferecem opções de acessibilidade como temas claros ou escuros, alteração no tamanho de elementos gráficos e textos, e comandos por voz. A personalização é uma prioridade, permitindo que nossos clientes adaptem a interface conforme suas preferências. Além disso, todos os nossos aplicativos utilizam um sistema automático de salvamento em nuvem, garantindo segurança e acessibilidade aos dados.</p>
+        <img src="GO!.jpg" alt="Equipe da ranGO!">
+    </section>
+
+    <section id="products" class="products">
+        <h2>Produtos</h2>
+        <div class="product-list">
+            <div class="product">
+                <img src="33873de188d5edf049177d77f7e4a9b8.png" alt="Software de Gestão de Estoque">
+                <h3>Gestão de Estoque</h3>
+                <p>Solução completa para gerenciamento de estoques com foco em simplicidade e eficiência.</p>
+            </div>
+            <div class="product">
+                <img src="33873de188d5edf049177d77f7e4a9b8.png" alt="Sistema de Vendas">
+                <h3>Sistema de Vendas</h3>
+                <p>Ferramenta integrada para controle de vendas.</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contato</h2>
+        <p>Entre em contato conosco para saber mais sobre nossos produtos e serviços.</p>
+        <form action="submit_form.php" method="post">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2024 ranGO! - Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
+-------------------------------------------------------------------------------------------------------------
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(11, 14, 24);
+    color: rgb(219, 219, 218);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgb(51, 116, 185);
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 28px;
+    font-size: 20PX;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.banner {
+    height: 92vh;
+    background-image: url('backgrounde.jpg');
+    background: linear-gradient(rgb(11, 14, 24), );
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px;
+    
+
+    
+
+}
+
+.about,
+.products,
+.contact {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: rgb(11, 14, 24);
+}
+
+.about img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.products .product-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.products .product {
+    width: 30%;
+    margin: 20px 0;
+    text-align: center;
+    background-color: rgb(11, 14, 24);
+    border: 1px solid rgb(51, 116, 185);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.products .product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact form label {
+    display: block;
+    margin: 10px 0 5px;
+    color: rgb(219, 219, 218);
+}
+
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid rgb(51, 116, 185);
+    border-radius: 4px;
+    background-color: rgb(219, 219, 218);
+    color: rgb(11, 14, 24);
+}
+
+.contact form button {
+    padding: 10px 20px;
+    background-color: rgb(51, 116, 185);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+footer {
+    background-color: rgb(51, 116, 185);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.banner h1 {
+    color: #fff;
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.banner p {
+    font-size: 30px;
+    text-align: center;
+    font-weight: 600;
+}
+
+
+header nav ul li a:hover {
+    text-decoration: none;
+    color: rgb(220 184 97);
+    font-size: 21px;
+    
+}
+
+.image-overlay {
+    position: absolute; /* Permite posicionamento absoluto dentro do container */
+    top: 69%; /* Ajusta a posição vertical da imagem sobreposta */
+    left: 50%; /* Ajusta a posição horizontal da imagem sobreposta */
+    transform: translate(30%, -20%); /* Centraliza a imagem */
+}
+.image-overlay2{
+    position: absolute; /* Permite posicionamento absoluto dentro do container */
+    top: 22%; /* Ajusta a posição vertical da imagem sobreposta */
+    left: -90%; /* Ajusta a posição horizontal da imagem sobreposta */
+    transform: translate(-77%, -20%); /* Centraliza a imagem */
+}
+
+.image-overlay img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do container */
+    height: auto; /* Mantém a proporção da imagem */
+}
