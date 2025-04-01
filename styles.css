@@ -15,7 +15,7 @@
 }
 
 body {
-
+    font-family: fonte;
     background-color: rgb(11, 14, 24);
     color: rgb(219, 219, 218);
     margin: 0;
@@ -26,74 +26,12 @@ body {
 /* HEADER(CABEÇALHO)*/
 
 header {
-    font-family: titulo;
     position: fixed;
     width: 100%;
     background-color: rgb(11, 14, 24);
     color: white;
-    padding: 10px 20px;
+    padding: 30px 20px;
     z-index: 10;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #1a1a1a;
-    padding: 15px;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.nav-list {
-    list-style: none;
-    display: flex;
-}
-
-.nav-list li {
-    margin-left: 20px;
-}
-
-.nav-list a {
-    color: white;
-    text-decoration: none;
-}
-
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.bar {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 3px 0;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .nav-list {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        background-color: #2c2c2c;
-        top: 60px;
-        right: 0;
-        width: 100%;
-    }
-    
-    .nav-list.active {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: flex;
-    }
 }
 
 header .logo {
@@ -248,18 +186,16 @@ nav ul li a:hover {
 
 
 .hero h2 {
-    font-family: titulo;
     color: #DBDBDA;
-    font-size: 65px;
+    font-size: 67px;
     line-height: 1;
     margin-bottom: 30px;
 
 }
 
 .hero-content p {
-    font-family: subTitulo;
     color: #B0B0B0;
-    font-size: 23px !important;
+    font-size: 21px !important;
 
     line-height: 1;
     margin-bottom: 50px;
@@ -267,7 +203,6 @@ nav ul li a:hover {
 }
 
 .cta-btn {
-    font-family: botao;
     background-color: rgb(220 184 97);
     color: white;
     padding: 20px 30px;
@@ -334,7 +269,6 @@ nav ul li a:hover {
 
 
 
-
 .popup {
     display: none;
     position: fixed;
@@ -353,14 +287,12 @@ nav ul li a:hover {
 }
 
 .popup-content h1 {
-    font-family: titulo;
     color: rgb(51, 116, 185);
     font-size: 33px;
     position: relative;
 }
 
 form label[for="nome"] {
-    font-family: subTitulo;
     color: rgba(0, 0, 0, 0.4);
 }
 
@@ -369,7 +301,6 @@ form input#nome {
 }
 
 #nome {
-    font-family: subTitulo;
     border: 2px solid #ccc;
     padding: 10px;
     border-radius: 5px;
@@ -382,7 +313,6 @@ form input#nome {
 }
 
 form label[for="email"] {
-    font-family: subTitulo;
     color: rgba(0, 0, 0, 0.4);
 }
 
@@ -391,7 +321,6 @@ form input#email {
 }
 
 #email {
-    font-family: subTitulo;
     border: 2px solid #ccc;
 
     padding: 10px;
@@ -411,7 +340,6 @@ form input#email {
 
 
 #telefone {
-    font-family: subTitulo;
     border: 2px solid #ccc;
 
     padding: 10px;
@@ -430,7 +358,6 @@ form input#email {
 }
 
 form label[for="telefone"] {
-    font-family: subTitulo;
     color: rgba(0, 0, 0, 0.4);
 }
 
@@ -441,7 +368,6 @@ form input#telefone {
 
 
 #restaurante {
-    font-family: subTitulo;
     border: 2px solid #ccc;
 
     padding: 10px;
@@ -460,7 +386,6 @@ form input#telefone {
 }
 
 form label[for="restaurante"] {
-    font-family: subTitulo;
     color: rgba(0, 0, 0, 0.4);
 }
 
@@ -470,7 +395,6 @@ form input#restaurante {
 
 
 #produto {
-    font-family: subTitulo;
     background-color: #fcfcfc;
 
     color: rgba(0, 0, 0, 0.4);
@@ -497,18 +421,15 @@ form input#restaurante {
 }
 
 #produto:focus {
-    
     outline: none;
     border-color: rgb(51, 116, 185);
 }
 
 form label[for="produto"] {
-    font-family: subTitulo;
     color: rgba(0, 0, 0, 0.4);
 }
 
 form input#produto {
-    font-family: subTitulo;
     color: rgba(0, 0, 0, 0.4);
 }
 
@@ -545,7 +466,6 @@ form label {
 
 form input,
 form select {
-    font-family: subTitulo;
     width: 100%;
     padding: 10px;
     margin-top: 5px;
@@ -555,7 +475,6 @@ form select {
 }
 
 form button {
-    font-family: subTitulo;
     width: 100%;
     padding: 15px;
     background-color: rgb(51, 116, 185);
@@ -568,14 +487,12 @@ form button {
 }
 
 form button:hover {
-    font-family: subTitulo;
     background-color: rgb(51, 116, 185);
 }
 
 form p {
-    font-family: subTitulo;
     font-size: 14px;
-    color: #888;
+    color: rgba(0, 0, 0, 0.6);
 }
 
 form p a {
@@ -640,16 +557,14 @@ form p a:hover {
 }
 
 .products h2 {
-    font-family: titulo;
     color: rgb(219, 219, 218);
     font-size: 2.5rem;
-    margin-top: 187px;
+    margin-top: 137px;
     margin-bottom: 10px;
 }
     
 
 .products p {
-    font-family: subTitulo;
     font-size: 1.4rem;
     margin-bottom: 10px;
 }
@@ -749,9 +664,8 @@ form p a:hover {
         padding: 40px 15px;
     }
 
-    .product h2 {
+    .product h3 {
         font-size: 2rem; /* Reduz o tamanho do título */
-        margin-top: -137px;
     }
 
     .products p {
@@ -781,7 +695,6 @@ form p a:hover {
 
     .product h3 {
         font-size: 1.8rem; /* Reduz o tamanho do título */
-        margin-top: 200px;
     }
 
     .product img {
@@ -822,7 +735,6 @@ form p a:hover {
 }
 
 .pricing-section h1 {
-    font-family: titulo;
     color: rgb(219, 219, 218);
     font-size: 2.5rem;
     margin-bottom: 10px;
@@ -830,7 +742,6 @@ form p a:hover {
 }
 
 .pricing-section p {
-    font-family: subTitulo;
     font-size: 1.2rem;
     margin-bottom: 40px;
 }
@@ -862,7 +773,6 @@ form p a:hover {
 }
 
 .card h2 {
-    font-family: titulo;
     color: rgb(218, 171, 61);
     margin-bottom: 10px;
     font-size: 1.5rem;
@@ -875,14 +785,12 @@ form p a:hover {
 }
 
 .card ul li {
-    font-family: subTitulo;
     margin-bottom: 10px;
     font-size: 1rem;
     color: rgb(219, 219, 218);
 }
 
 .card button {
-    font-family: botao;
     background-color: rgb(218, 171, 61);
     border: none;
     padding: 10px;
@@ -1004,7 +912,6 @@ form p a:hover {
 
 
 footer {
-    font-family: titulo;
     background-color: rgb(11, 14, 24);
 
     font-size: 1.2em;
