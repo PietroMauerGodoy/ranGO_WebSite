@@ -14,8 +14,9 @@
     src: url("Fontes/FilsonProBold.otf");
 }
 
+
 body {
-    font-family: fonte;
+    font-family: titulo;
     background-color: rgb(11, 14, 24);
     color: rgb(219, 219, 218);
     margin: 0;

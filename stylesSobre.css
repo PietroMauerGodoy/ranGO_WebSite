@@ -2,13 +2,10 @@
     font-family: "titulo";
     src: url("Fontes/FilsonProHeavy.otf");
 }
-
-
 @font-face {
     font-family: "subTitulo";
     src: url("Fontes/FilsonProRegular.otf");
 }
-
 @font-face {
     font-family: "botao";
     src: url("Fontes/FilsonProBold.otf");
